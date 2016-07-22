@@ -62,7 +62,7 @@ var __containerRect;
 
 
 var currentPositionY = function(options) {
-  if (!__container && options.containerId) __container = document.getElementById(options.containerId);
+  if (!__container && options && options.containerId) __container = document.getElementById(options.containerId);
   if (__container) return __container.scrollTop;
   var supportPageOffset = window.pageXOffset !== undefined;
   var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
